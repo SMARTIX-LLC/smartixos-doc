@@ -138,7 +138,7 @@ Some software requires the porter to locate third-party libraries and add the re
 Other software bundles all necessary libraries into the distribution file.
 The second approach seems easier at first, but there are some serious drawbacks:
 
-This list is loosely based on the https://fedoraproject.org/wiki/Packaging:No_Bundled_Libraries[Fedora] and http://wiki.gentoo.org/wiki/Why_not_bundle_dependencies[Gentoo] wikis, both licensed under the http://creativecommons.org/licenses/by-sa/3.0/[CC-BY-SA 3.0] license.
+This list is loosely based on the https://fedoraproject.org/wiki/Packaging:No_Bundled_Libraries[Fedora] and https://wiki.gentoo.org/wiki/Why_not_bundle_dependencies[Gentoo] wikis, both licensed under the https://creativecommons.org/licenses/by-sa/3.0/[CC-BY-SA 3.0] license.
 
 Security::
 If vulnerabilities are found in the upstream library and fixed there, they might not be fixed in the library bundled with the port.
@@ -607,6 +607,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Display statistics about your code
+WWW=		https://github.com/XAMPPRocky/tokei/
 
 USES=		cargo
 USE_GITHUB=	yes
@@ -651,6 +652,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Display statistics about your code
+WWW=		https://github.com/XAMPPRocky/tokei/
 
 USES=		cargo
 USE_GITHUB=	yes
@@ -821,6 +823,7 @@ CATEGORIES=     benchmarks
 
 MAINTAINER=     dmgk@FreeBSD.org
 COMMENT=        Tiny program that sends some load to a web application
+WWW=            https://github.com/rakyll/hey/
 
 LICENSE=        APACHE20
 LICENSE_FILE=   ${WRKSRC}/LICENSE
@@ -835,7 +838,7 @@ PLIST_FILES=    bin/hey
 
 If the "easy" way is not adequate or more control over dependencies is needed, the full porting process is described below.
 
-Creating a Go based port is a five stage process.
+Creating a Go-based port is a five-stage process.
 First we need to provide a ports template that fetches the application distribution file:
 
 [.programlisting]
@@ -847,6 +850,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Remote repository management made easy
+WWW=		https://github.com/x-motemen/ghq/
 
 USES=		go:modules
 USE_GITHUB=	yes
@@ -896,6 +900,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Remote repository management made easy
+WWW=		https://github.com/x-motemen/ghq/
 
 USES=		go:modules
 USE_GITHUB=	yes
@@ -976,6 +981,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Shell script analysis tool
+WWW=		https://www.shellcheck.net/
 
 USES=		cabal
 
@@ -1269,7 +1275,7 @@ If `MASTER_SITES` is set to `CPAN`, the correct subdirectory is usually selected
 If the default subdirectory is wrong, `CPAN/Module` can be used to change it.
 `MASTER_SITES` can also be set to the old `MASTER_SITE_PERL_CPAN`, then the preferred value of `MASTER_SITE_SUBDIR` is the top-level hierarchy name.
 For example, the recommended value for `p5-Module-Name` is `Module`.
-The top-level hierarchy can be examined at http://cpan.org/modules/by-module/[cpan.org].
+The top-level hierarchy can be examined at https://cpan.org/modules/by-module/[cpan.org].
 This keeps the port working when the author of the module changes.
 
 The exception to this rule is when the relevant directory does not exist or the distfile does not exist in that directory.
@@ -1307,8 +1313,8 @@ When a port needs Perl support, it must set `USES=perl5` with the optional `USE_
 
 [NOTE]
 ====
-Ports of Perl modules which do not have an official website must link to `cpan.org` in the WWW line of [.filename]#pkg-descr#.
-The preferred URL form is `http://search.cpan.org/dist/Module-Name/` (including the trailing slash).
+Ports of Perl modules which do not have an official website must link to `cpan.org` in the WWW line of [.filename]#Makefile#.
+The preferred URL form is `https://search.cpan.org/dist/Module-Name/` (including the trailing slash).
 ====
 
 [NOTE]
@@ -1510,7 +1516,7 @@ USES=	display
 [[desktop-entries]]
 === Desktop Entries
 
-Desktop entries (http://standards.freedesktop.org/desktop-entry-spec/latest/[a Freedesktop standard]) provide a way to automatically adjust desktop features when a new program is installed, without requiring user intervention.
+Desktop entries (https://standards.freedesktop.org/desktop-entry-spec/latest/[a Freedesktop standard]) provide a way to automatically adjust desktop features when a new program is installed, without requiring user intervention.
 For example, newly-installed programs automatically appear in the application menus of compatible desktop environments.
 Desktop entries originated in the GNOME desktop environment, but are now a standard and also work with KDE and Xfce.
 This bit of automation provides a real benefit to the user, and desktop entries are encouraged for applications which can be used in a desktop environment.
@@ -1539,7 +1545,7 @@ Syntax is:
 DESKTOP_ENTRIES=	"NAME" "COMMENT" "ICON" "COMMAND" "CATEGORY" StartupNotify
 ....
 
-The list of possible categories is available on the http://standards.freedesktop.org/menu-spec/latest/apa.html[Freedesktop website].
+The list of possible categories is available on the https://standards.freedesktop.org/menu-spec/latest/apa.html[Freedesktop website].
 `StartupNotify` indicates whether the application is compatible with _startup notifications_.
 These are typically a graphic indicator like a clock that appear at the mouse pointer, menu, or panel to give the user an indication when a program is starting.
 A program that is compatible with startup notifications clears the indicator after it has started.
@@ -1588,8 +1594,6 @@ Please use it as a guide for creating new ports.
 
 [.programlisting]
 ....
-# $FreeBSD$
-
 PORTNAME=	regexxer
 DISTVERSION=	0.10
 CATEGORIES=	devel textproc gnome
@@ -1597,6 +1601,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Interactive tool for performing search and replace operations
+WWW=		http://regexxer.sourceforge.net/
 
 USES=		gettext gmake localbase:ldflags pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
@@ -3399,6 +3404,7 @@ CATEGORIES=	devel www pear
 
 MAINTAINER=	example@domain.com
 COMMENT=	PEAR Date and Time Zone Classes
+WWW=		https://pear.php.net/package/Date/
 
 USES=	pear
 
@@ -3446,6 +3452,7 @@ CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Core Framework libraries
+WWW=		https://pear.horde.org/
 
 OPTIONS_DEFINE=	KOLAB SOCKETS
 KOLAB_DESC=	Enable Kolab server support
@@ -3570,6 +3577,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	john@doe.tld
 COMMENT=	Python sample module
+WWW=		https://pypi.org/project/sample/
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 
@@ -4228,6 +4236,7 @@ CATEGORIES=	whatever
 
 MAINTAINER=	john@doe.tld
 COMMENT=	Sample
+WWW=		https://github.com/lua_sample/sample/
 
 RUN_DEPENDS=	${LUA_REFMODLIBDIR}/lpeg.so:devel/lua-lpeg@${LUA_FLAVOR}
 
@@ -4251,6 +4260,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	john@doe.tld
 COMMENT=	Sample
+WWW=		https://github.com/lua_sample/sample/
 
 USES=		lua:module
 
@@ -4569,8 +4579,6 @@ An example simple [.filename]#rc.d# script to start the doormand daemon:
 ....
 #!/bin/sh
 
-# $FreeBSD$
-#
 # PROVIDE: doormand
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
@@ -4643,7 +4651,6 @@ The package:devel/rclint[] port can check for most of these, but it is not a sub
 
 [.procedure]
 . If this is a new file, does it have a [.filename]#.sh# extension? If so, that must be changed to just [.filename]#file.in# since [.filename]#rc.d# files may not end with that extension.
-. Does the file have a `$FreeBSD$` tag?
 . Do the name of the file (minus [.filename]#.in#), the `PROVIDE` line, and `$` _name_ all match? The file name matching `PROVIDE` makes debugging easier, especially for man:rcorder[8] issues. Matching the file name and `$`_name_ makes it easier to figure out which variables are relevant in [.filename]#rc.conf[.local]#. It is also a policy for all new scripts, including those in the base system.
 . Is the `REQUIRE` line set to `LOGIN`? This is mandatory for scripts that run as a non-root user. If it runs as root, is there a good reason for it to run prior to `LOGIN`? If not, it must run after so that local scrips can be loosely grouped to a point in man:rcorder[8] after most everything in the base is already running.
 . Does the script start a persistent service? If so, it must have `KEYWORD: shutdown`.
