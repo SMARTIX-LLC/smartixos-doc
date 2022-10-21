@@ -388,7 +388,7 @@ Possible arguments: `7`, `module`, `theme`
 
 Automate installation of a port that is a Drupal theme or module.
 Use with the version of Drupal that the port is expecting.
-For example, `USES=drupal:7,module` says that this port creates a Drupal 6 module.
+For example, `USES=drupal:7,module` says that this port creates a Drupal 7 module.
 A Drupal 7 theme can be specified with `USES=drupal:7,theme`.
 
 [[uses-eigen]]
@@ -1935,6 +1935,14 @@ These variables are available for ports:
 * `UNIQUE_PREFIX_FILES`: A list of files that need to be prefixed. Default: empty.
 * `UNIQUE_SUFFIX`: The suffix to be used for files. Default: `${PKGNAMESUFFIX}`.
 * `UNIQUE_SUFFIX_FILES`: A list of files that need to be suffixed. Default: empty.
+
+[[uses-vala]]
+== `vala`
+
+Possible arguments: `build`, `lib`, `no_depend`
+
+Adds build or library dependencies on package:lang/vala[].
+The `no_depend` argument is reserved for package:lang/vala[] itself.
 
 [[uses-varnish]]
 == `varnish`

@@ -1451,6 +1451,7 @@
 * Mel Flynn <mailto:rflynn@acsalaska.net[rflynn@acsalaska.net]>
 * Meno Abels <mailto:meno.abels@adviser.com[meno.abels@adviser.com]>
 * Meyer Wolfsheim <mailto:wolf@priori.net[wolf@priori.net]>
+* Mia Rain <mailto:mia-rain@tuta.io[mia-rain@tuta.io]>
 * Micha Class <mailto:michael_class@hpbbse.bbn.hp.com[michael_class@hpbbse.bbn.hp.com]>
 * Michael A. Kohn <mailto:naken@naken.cc[naken@naken.cc]>
 * Michael Alyn Miller <mailto:malyn@strangeGizmo.com[malyn@strangeGizmo.com]>
@@ -1899,7 +1900,6 @@
 * Ron Lenk <mailto:rlenk@widget.xmission.com[rlenk@widget.xmission.com]>
 * Ron van Daal <mailto:ronvdaal@n1x.nl[ronvdaal@n1x.nl]>
 * Ronald F. Guilmette <mailto:rfg@monkeys.com[rfg@monkeys.com]>
-* Ronald Klop <mailto:ronald-lists@klop.ws[ronald-lists@klop.ws]>
 * Ronald Kuehn <mailto:kuehn@rz.tu-clausthal.de[kuehn@rz.tu-clausthal.de]>
 * Roselyn Lee <mailto:rosel@verniernetworks.com[rosel@verniernetworks.com]>
 * Ross West <mailto:freebsd@linepoint.com[freebsd@linepoint.com]>

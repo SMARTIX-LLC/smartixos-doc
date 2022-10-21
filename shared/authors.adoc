@@ -2788,6 +2788,10 @@
 :rlibby-email: rlibby@FreeBSD.org
 :rlibby: {rlibby-name} <{rlibby-email}>
 
+:ronald-name: Ronald Klop
+:ronald-email: ronald@FreeBSD.org
+:ronald: {ronald-name} <{ronald-email}>
+
 :rpokala-name: Ravi Pokala
 :rpokala-email: rpokala@FreeBSD.org
 :rpokala: {rpokala-name} <{rpokala-email}>
@@ -3671,8 +3675,11 @@
 // FreeBSD Freenode IRC Liasons
 :irc-email: irc@FreeBSD.org
 
+// FreeBSD Package Management Team
+:pkgmgr-members: {antoine}, {bdrewery}
+
 // FreeBSD Ports Manager Team
-:portmgr-members: {mat}, {antoine}, {bapt}, {bdrewery}, {rene}, {swills}, {tcberner}
+:portmgr-members: {mat}, {bapt}, {pizzamig}, {rene}, {swills}, {tcberner}
 
 // FreeBSD Release Engineering Teams
 :re: re@FreeBSD.org
