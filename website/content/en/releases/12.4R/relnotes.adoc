@@ -175,10 +175,10 @@ gitref:d5c176ad6a7b0cd78e3b893284b292e18ecb804f[repository=src]
 The man:sh[1] utility will now read more profile files. It will load each .sh file in /etc/profile.d, then /usr/local/etc/profile, then each .sh file in /usr/local/etc/profile.d/.
 gitref:73ab1c87c208dbb0609be572eb31591353d71e07[repository=src]
 
-The man:usbconfig[8] utiliy will use man:getopt[3] to handle options.
+The man:usbconfig[8] utility will use man:getopt[3] to handle options.
 gitref:081853844bd4c43a59ac22357d41bb3abc39a45a[repository=src]
 
-The man:usbconfig[8] utiliy had its documentation improved.
+The man:usbconfig[8] utility had its documentation improved.
 gitref:940db7edacb21a513924472f6cf4eec6a5e75090[repository=src]
 
 The man:usbconfig[8] utility has been improved by adding a `-v` flag.
@@ -304,9 +304,18 @@ The man:net80211[4] interface has improved several validations including SSID le
 gitref:f4d0e8787a09f4cdfb856924aaca97f1c78b65b1[repository=src]
 gitref:e7c990ba3f8de8c4882390cad9b01a9fa25ad068[repository=src]
 
-The man:pf[4] framework had some memory leaks fixed and now ensures the correct source/destination IP address in ICMP errors. It also provides improved route-to handling of pfsync'd states along with other changes and improvements.
+The man:pf[4] framework now ensures the correct source/destination IP address in ICMP errors.
+gitref:a50876f0ac7a5839531c0c169cb1c88bc6e13389[repository=src]
+(Sponsored by Rubicon Communications, LLC ("Netgate"))
 
-The man:sched_ule[4] scheduler bad a bug fixed about a loss of significance when setting kern.sched.interact above 32.
+The man:pf[4] framework had some memory leaks fixed.
+gitref:329c9b9da5928e0a2de0014c4f6a254ceae299ec[repository=src]
+
+The man:pf[4] framework provides improved route-to handling of man:pfsync[4]'d states.
+gitref:592b4f93632aa1e0bfd9f28ccfd4ab46ecc99bf4[repository=src]
+{{< sponsored "Orange Business Services" >}}
+
+The man:sched_ule[4] scheduler had a bug fixed about a loss of significance when setting kern.sched.interact above 32.
 gitref:b7eded5ea1f1b051489627989c13d9e48521ed9f[repository=src]
 
 The vm subsystem had a problem fixed that broke the vm reservation when it was mistakenly unable to provide a satisfactory set of pages.
@@ -368,21 +377,53 @@ The man:mpr[4] and man:mps[4] drivers had a more robust device mapping implement
 gitref:9d842d84f49af6d4aacaea694dcaea4173522684[repository=src]
 {{< sponsored "iXsystems, Inc." >}}
 
-The man:ocs_fc[4] device driver had a use-after-free bug fixed along with some memory leaks.
+The man:ocs_fc[4] device driver had a memory leak fixed.
+gitref:12e6cbd158530259d951e3e246a52ddc57fa644b[repository=src]
 
-The man:pfsync[4] pseudo-device had some locking, defer mode, and NULL check bugs fixed.
+The man:ocs_fc[4] device driver had two use-after-free bugs fixed.
+gitref:241d1376550452d2da5eb80e9ee5d84ae567dd7b[repository=src]
+gitref:fa3e66e9f7cd903050454fc284e2709a9e28e651[repository=src]
 
-The man:random[4] device had some improvements that now make entropy sources deregistration-safe. On x86 prefer RDSEED over RDRAND when available as per Intel documentation.
+The man:ocs_fc[4] device driver had a possible null pointer dereference fixed.
+gitref:9199f5e0ba5c20e2f170b549a743a550d9b38ec8[repository=src]
+
+The man:pfsync[4] pseudo-device had some locking bugs fixed.
+gitref:7164b77ce2f3ecc3697a5ea9a225ff15a6a421ab[repository=src]
+(Sponsored by Rubicon Communications, LLC ("Netgate"))
+
+The man:pfsync[4] pseudo-device had some NULL check bugs fixed.
+gitref:bbbe18b317956f3e0d87a277acc1941222fa8eb9[repository=src]
+gitref:f3b722fed330ee3a08a21947d6b4cf2fb70cc562[repository=src]
+(Sponsored by Rubicon Communications, LLC ("Netgate"))
+
+The man:pfsync[4] pseudo-device had a defer mode bug fixed.
+gitref:c36006be54242b3c4e07ac646bebb642555e5905[repository=src]
+(Sponsored by Rubicon Communications, LLC ("Netgate"))
+
+The man:random[4] driver on x86 will now prefer RDSEED over RDRAND when available as per Intel documentation.
+gitref:a68e606c402ea5ce2c8257d0566e6f397594aa54[repository=src]
+
+The man:random[4] device had some improvements that now make entropy sources deregistration-safe.
+gitref:7878a69e0415251e4c7a0d3447f998207258ad41[repository=src]
 
 The man:rk_i2c[4] driver had a number of improvements including the increasing of the number of bytes that can be sent to 32.
+gitref:342d73431ee555ae9a62820c28a39ee53cffc9e5[repository=src]
 
-The man:snd_uaudio[4] USB audio and MIDI driver has some string computations for iFeature fixed.
+The man:snd_uaudio[4] USB audio and MIDI driver had some string computations for iFeature fixed.
+gitref:43a03be0bb5070b445b1c16d17b1791d345ec5d0[repository=src]
+{{< sponsored "NVIDIA Networking" >}}
 
 The man:usb[4] driver had a use-after-free bug fixed.
 gitref:bb9bee1ffbb27f903bfd2c11d681d331bea727ea[repository=src]
 {{< sponsored "NVIDIA Networking" >}}
 
-The man:vt[4] virtual terminal console driver had a bug fixed about colour in pixel blocks with more than 4 colours and another bug fixed regarding double-click word selection for first/last word on line.
+The man:vt[4] virtual terminal console driver had a bug fixed regarding double-click word selection for first/last word on line.
+gitref:caeade0e00d50ec7a2392a3d28d85f2ec535344b[repository=src]
+{{< sponsored "The FreeBSD Foundation" >}}
+
+The man:vt[4] virtual terminal console driver had a bug fixed about color in pixel blocks with more than 4 colors.
+gitref:4e4e477d89fd0333425ed4623858082bdb58ffe7[repository=src]
+{{< sponsored "The FreeBSD Foundation" >}}
 
 [[storage]]
 == Storage
@@ -392,9 +433,25 @@ This section covers changes and additions to file systems and other storage subs
 [[storage-general]]
 === General Storage
 
-The man:fusefs[5] file system in userspace had several bugs fixed including a race condition, an undefined variable access, and a couple of bugs regarding OP_RECLAIM. Other fixes and improvements have been added.
+The man:fusefs[5] file system in userspace had a race condition fixed.
+gitref:c85846ea3ea531affb80edb2c982017d35b5a40f[repository=src]
 
-The NFS client code had a number of bug fixes including a use-after-free bug, a race condition, and a forced dismount looping.
+The man:fusefs[5] file system in userspace had a couple of bugs regarding VOP_RECLAIM fixed.
+gitref:4d5fb17274aa868561e99d714b75f0ddee446948[repository=src]
+
+The man:fusefs[5] file system had an undefined variable access fixed.
+gitref:20004b265add4425851a0ee3bbef0139b0baae6d[repository=src]
+{{< sponsored "Axcient" >}}
+
+The NFS client code had a forced dismount looping fixed.
+gitref:00e9bc2d937fd8de6638c4a5669e78f04cd94110[repository=src]
+
+The NFS client code had a number of bug fixes including two use-after-free bugs.
+gitref:04c2ce41e3fcdef045eeea9f338f6b0eb547f64d[repository=src]
+gitref:22d6238a047311edf01df8b1b04bb2af3c99ae15[repository=src]
+
+The NFS client code had a race condition fixed.
+gitref:ca826694e3b08133b9e16744e1178863cfc4c16b[repository=src]
 
 
 [[boot]]
@@ -422,10 +479,21 @@ The man:dummynet[4] system facility had a bug regarding the validation of the le
 gitref:3f22f161b936b6279a68d6e9439b30f2abb50cad[repository=src]
 {{< sponsored "The FreeBSD Foundation" >}}
 
-The man:ipfilter[4] packet filter added the `SDT` and `DT5` man:dtrace[1] probes. It now has the ability to dump a copy of ippool in ippool.conf format.
-From now on, to improve security, man:ipfilter[4] only allows jails to manipulate ipfilter rules, NAT tables, and ippools if the jail has its own VNET. A number of other improvements have been implemented.
+The man:ipfilter[4] packet filter added the `DT5` and `SDT` man:dtrace[1] probes.
+gitref:67b86b71c19ce44dd98cd63f6f684354cd0f351e[repository=src]
+gitref:09aa9a1f82bfccfd7e87dcf7f2bf055d2c137b52[repository=src]
 
-The man:netmap[4] framework had a fix for a TOCTOU vulnerability as well as a bug regarding an integer overflow.
+From now on, to improve security, man:ipfilter[4] only allows jails to manipulate ipfilter rules, NAT tables, and ippools if the jail has its own VNET.
+gitref:ed86cf0121f9a28e754f605c5be6c6576cde6c64[repository=src]
+
+The man:ipfilter[4] packet filter has now the ability to dump a copy of ippool in ippool.conf format.
+gitref:95dfabe85a544f77c926ce799442da5c1ff05756[repository=src]
+
+The man:netmap[4] framework had a bug regarding an integer overflow fixed (CVE-2022-23085).
+gitref:95602165e33a3045a27245cc1e61e67bf4feeed1[repository=src]
+
+The man:netmap[4] framework had a fix for a TOCTOU vulnerability (CVE-2022-23084).
+gitref:6fa8af618475024262fc99b0f0e6c2aa0e1340fe[respository=src]
 ////
 [[future-releases]]
 == General Notes Regarding Future FreeBSD Releases
