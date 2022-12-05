@@ -57,7 +57,6 @@ Upgrading FreeBSD should only be attempted after backing up _all_ data and confi
 
 This section lists the various Security Advisories and Errata Notices since {releasePrev}.
 
-////
 [[security]]
 === Security Advisories
 
@@ -75,11 +74,10 @@ This section lists the various Security Advisories and Errata Notices since {rel
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-22:10.aio.asc[FreeBSD-SA-22:10.aio] |9 August 2022 |AIO credential reference count leak
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-22:11.vm.asc[FreeBSD-SA-22:11.vm] |9 August 2022 |Memory disclosure by stale virtual memory mapping
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-22:13.zlib.asc[FreeBSD-SA-22:13.zlib] |30 August 2022 |zlib heap buffer overflow
-|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-22:14.heimdal.asc[FreeBSD-SA-22:14.heimdal] |16 November 2022 |Multiple vulnerabilities in Heimdal
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-22:14.heimdal.asc[FreeBSD-SA-22:14.heimdal] |29 November 2022 (revised)|Multiple vulnerabilities in Heimdal
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-SA-22:15.ping.asc[FreeBSD-SA-22:15.ping] |29 November 2022 |Stack overflow in ping(8)
 |===
-////
 
-////
 [[errata]]
 === Errata Notices
 
@@ -96,19 +94,13 @@ This section lists the various Security Advisories and Errata Notices since {rel
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-22:17.cam.asc[FreeBSD-EN-22:17.cam] |9 August 2022 |Kernel memory corruption during SCSI error recovery
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-22:20.tzdata.asc[FreeBSD-EN-22:20.tzdata] |30 August 2022 |Timezone database information update
 |link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-22:22.tzdata.asc[FreeBSD-EN-22:22.tzdata] |1 November 2022 |Timezone database information update
+|link:https://www.FreeBSD.org/security/advisories/FreeBSD-EN-22:28.heimdal.asc[FreeBSD-EN-22:28.heimdal] |29 November 2022 |Regression in Heimdal KDC
 |===
-////
 
 [[userland]]
 == Userland
 
 This section covers changes and additions to userland applications, contributed software, and system utilities.
-
-[[userland-config]]
-=== Userland Configuration Changes
-
-// SAMPLE ENTRY:
-// A new man:rc.conf[5] variable has been added, `linux_mounts_enable`, which controls if Linux(R)-specific filesystems are mounted in [.filename]#/compat/linux# if `linux_enable` is set to `YES`. {{< revision "364883" >}} (Sponsored by The FreeBSD Foundation)
 
 [[userland-programs]]
 === Userland Application Changes
@@ -258,14 +250,10 @@ The tzdata 2022f was imported into the tree.
 gitref:df5c24d590895801e3d62494e1a350f4fed6a4f6[repository=src]
 
 The man:unbound[8] utility has been updated to version 1.16.3.
-gitreg:51206a8d11ae17ee3a64c51a1afc7e5bf7881da4[repository=src]
+gitref:51206a8d11ae17ee3a64c51a1afc7e5bf7881da4[repository=src]
 
 wpa has been updated to version 2.10. This includes hostapd 2.10.
 gitref:ea5113953168dcc26fce5f602c563fc0eebd2fe7[repository=src]
-
-[[userland-libraries]]
-=== Runtime Libraries and API
-
 
 [[kernel]]
 == Kernel
