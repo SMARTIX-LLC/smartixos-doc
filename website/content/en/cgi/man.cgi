@@ -1117,8 +1117,8 @@ sub html_header {
     my $html_meta = q|
 <meta name="robots" content="nofollow" />
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
-<link rel="search" type="application/opensearchdescription+xml" href="https://www.freebsd.org/opensearch/man.xml" title="FreeBSD Manual Pages" />
-<link rel="search" type="application/opensearchdescription+xml" href="https://www.freebsd.org/opensearch/man-freebsd-release-ports.xml" title="FreeBSD + Ports Manual Pages" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.freebsd.org/opensearch/man.xml" title="FreeBSD Man" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.freebsd.org/opensearch/man-freebsd-release-ports.xml" title="FreeBSD Man+P" />
 <style type="text/css">
 <!--
 b { color: #996600; }
@@ -1192,6 +1192,14 @@ sub do_man {
     # not supported query characters
     $form{'query'} =~ s/"//g;
     $form{'query'} =~ s/=//g;
+
+    # Firefox opensearch autocomplete workaround
+    if ($form{'sourceid'} eq 'opensearch') {
+        # remove space between double colon
+        $form{'query'} =~ s/: :/::/g;
+        # remove space before a dot 
+        $form{'query'} =~ s/ \./\./g;
+    }
 
     $name = $query = $form{'query'};
     $section  = $form{'sektion'};
