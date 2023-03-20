@@ -4,17 +4,18 @@ sidenav: download
 ---
 
 :localRel: 13.2
-:localBranchName: RC2
+:localBranchName: RC3
 :localBranchStable: stable/13
 :localBranchReleng: releng/13.2
-:localRelSha256: ../checksums/CHECKSUM.SHA256-FreeBSD-13.2-RC2
-:localRelSha512: ../checksums/CHECKSUM.SHA512-FreeBSD-13.2-RC2
+:localRelSha256: ../checksums/CHECKSUM.SHA256-FreeBSD-13.2-RC3
+:localRelSha512: ../checksums/CHECKSUM.SHA512-FreeBSD-13.2-RC3
 
 = FreeBSD {localRel} Release Checksum Signatures
 
 == Signed Checksum Signatures
 
-This page contains links to the PGP-signed checksum files for FreeBSD {localRel}.
+This page contains links to the PGP-signed checksum files for FreeBSD 13.2 **release candidate 3**.
+//This page contains links to the PGP-signed checksum files for FreeBSD {localRel}.
 
 == Installation Image Checksums
 
