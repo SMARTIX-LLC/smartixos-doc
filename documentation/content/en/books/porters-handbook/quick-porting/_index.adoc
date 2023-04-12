@@ -81,7 +81,7 @@ The minimal [.filename]#Makefile# would look something like this:
 PORTNAME=	oneko
 DISTVERSION=	1.1b
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.cs.columbia.edu/archives/X11R5/contrib/
+MASTER_SITES=	ftp://ftp.rediris.es/sites/ftp.freebsd.org/pub/FreeBSD/
 
 MAINTAINER=	youremail@example.com
 COMMENT=	Cat chasing a mouse all over the screen
@@ -295,7 +295,7 @@ Add a short description of the program to the Description field of the PR (perha
 [NOTE]
 ====
 Giving a good description in the summary of the problem report makes the work of port committers and triagers a lot easier.
-The expected format for new ports is "[NEW PORT] _category/portname short description of the port_" for new ports.
+The expected format for new ports is "[NEW PORT] _category/portname short description of the port_".
 Using this scheme makes it easier and faster to begin the work of committing the new port.
 ====
 
@@ -310,6 +310,6 @@ The submitter's name will also be added to the list of extref:{contributors}[Add
 
 [IMPORTANT]
 ====
-In previous it was possible to submit patches for new ports using man:shar[1] file which is no longer the case with the evolution of man:git[1].
-Committers no longer entertain man:shar[1] files as it is prone to mistake and does not add the relevant entry in the categories [.filename]#Makefile#.
+Previously it was possible to submit patches for new ports using a man:shar[1] file; this is no longer the case with the evolution of man:git[1].
+Committers no longer accept man:shar[1] files as their use is prone to mistake and does not add the relevant entry in the category's [.filename]#Makefile#.
 ====
